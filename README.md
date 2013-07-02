@@ -44,6 +44,8 @@ STEP 5: SETUP YOUR TEMPLATE VARIABLES
 
 
 STEP 6: SETUP TABLE IN YOUR MODX DATABASE
+
+
 CREATE TABLE IF NOT EXISTS `modx_icc` (
   `icc_id` int(50) NOT NULL AUTO_INCREMENT,
   `refer` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -66,23 +68,34 @@ STEP 7: CREATE YOUR PAGE
   - Whichever you prefer
 
 STEP 8: CREATE CHUNK OR PASTE IN CONTENT
-<div id="icc_form">
-<input type="text" id="icc_name" value="" placeholder="Full Name"><br>
-<input type="text" id="icc_email" value="" placeholder="Email Address"><br>
-<input type="text" id="icc_phone" value="" placeholder="Phone # (Digits Only)"><br>
-<button id="iccSubmit">click me</button>
-</div>
-<div id="icc_success">Thank You for submitting</div>
+
+&lt;div id="icc_form"&gt;
+
+&lt;input type="text" id="icc_name" value="" placeholder="Full Name"&gt;&lt;br&gt;
+
+&lt;input type="text" id="icc_email" value="" placeholder="Email Address"&gt;&lt;br&gt;
+
+&lt;input type="text" id="icc_phone" value="" placeholder="Phone # (Digits Only)"&gt;&lt;br&gt;
+
+&lt;button id="iccSubmit"&gt;click me&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;div id="icc_success"&gt;Thank You for submitting&lt;/div&gt;
 
 This is the basic form to run ICC. 
-NOTICE: its not in <form> because we don't need MODX to reload the page. We are using AJAX to send and receive. 
+
+NOTICE: its not in &lt;form&gt; because we don't need MODX to reload the page. We are using AJAX to send and receive. 
+
 NOTICE: we are using placeholder so we can check the value easier in jQuery. Must use HTML5 doctype but you already should be.
 
 
 STEP 9: BASE CSS
+
 .errorField{
   background: #f87a7a;
 }
+
 .validField{
 	background: #c7f87a;
 }
